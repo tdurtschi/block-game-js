@@ -24,8 +24,8 @@ body{
 }
 
 .cell{
-	min-width:26px;
-	height:26px;
+	min-width:21px;
+	height:21px;
 	border:1px solid #FFF;
 }
 
@@ -54,7 +54,8 @@ body{
 }
 
 .gamePiece{
-
+	display:inline-block;
+	margin:12px;
 }
 
 .gamePieceContainer{

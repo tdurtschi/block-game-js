@@ -67,8 +67,8 @@ function GameBoard(x, y) {
 
 		function handlePieceDrop(event, ui){
 			var $gamePiece = ui.draggable;
-		    var offsetY = ui.offset.top;
-		    var offsetX = ui.offset.left;
+		    var offsetY = ui.offset.top + 12; //Account for margin
+		    var offsetX = ui.offset.left + 12;
 
 		    function getCoordinates(x, y, $piece){
 				var dx = x - gameX;

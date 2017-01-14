@@ -32,17 +32,18 @@ var Piece = function(playerId, pid) {
 
 		$piece.data("pid", pid);
 
-		$("<div></div>", {class:"gamePieceContainer"})
-			.append($piece)
-			.appendTo($("#pieceCollection"));
+		// $("<div></div>", {class:"gamePieceContainer"})
+		// 	.append($piece)
+		// 	.appendTo($("#pieceCollection"));
+		$piece.appendTo($("#pieceCollection"));
 	}
 
 	function hide() {
-		$piece.parent().addClass("hidden");
+		$piece.addClass("hidden");
 	}
 
 	function show() {
-		$piece.parent().removeClass("hidden");
+		$piece.removeClass("hidden");
 	}
 
 	function getNewGamePiece(){
