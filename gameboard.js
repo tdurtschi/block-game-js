@@ -23,12 +23,48 @@ function GameBoard(x, y) {
 			$tr.appendTo($board);
 			board.push(gameRow);
 		}
-			
+
 		setupDroppable();
 	}
 	
 
 	function setupDroppable() {
+		function applyPiece(x, y, $piece, playerState){
+			var pieceData = GamePieces[$piece.data("pid")];
+			for(var i = 0; i < pieceData.length; i++)
+			{
+				for(var j = 0; j < pieceData[i].length; j++)
+				{
+					if(pieceData[i][j] == 1)
+					{
+						GameArray.html[y + i][x + j].addClass(PlayerClassName).removeClass("greyCell");
+						GameArray.state[y + i][x + j] = CurrentPlayerId;
+					}
+				}
+			}
+			
+			$piece.remove();
+		}
+
+		function getNextPlayer(currentPlayerId){
+			var nextId = (currentPlayerId + 1) % 5;
+			if(nextId == 0)
+			{
+				nextId++;
+			}
+			return nextId;
+		}
+
+		function handleAfterMove() {
+			PlayerPieceCollections[CurrentPlayerId].hidePieces();
+
+			//1,2,3,4,1.....
+			CurrentPlayerId = getNextPlayer(CurrentPlayerId);
+			PlayerClassName = "p" + CurrentPlayerId + "Cell";
+
+			PlayerPieceCollections[CurrentPlayerId].showPieces();
+		}
+
 		function handlePieceDrop(event, ui){
 			var $gamePiece = ui.draggable;
 		    var offsetY = ui.offset.top;
