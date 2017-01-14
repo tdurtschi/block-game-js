@@ -1,0 +1,106 @@
+body{
+	background-color:#acc;
+	overflow-y:hidden;
+}
+
+#gameContainer{
+	margin:10px;
+	padding:5px;
+	overflow:hidden;
+	background-color:#FFF;
+}
+
+#gameGrid{
+	float:left;
+}
+
+#pieceCollection{
+	background-color: #FFF;
+	position:fixed;
+	bottom:1em;
+	right:1em;
+	height:70%;
+	width:50%;
+}
+
+.cell{
+	min-width:26px;
+	height:26px;
+	border:1px solid #FFF;
+}
+
+.greyCell{
+	background-color:#DDD;
+}
+
+.whiteCell{
+	opacity:0;
+}
+
+.p1Cell{
+	background-color:#F00;
+}
+
+.p2Cell{
+	background-color:#0C0;
+}
+
+.p3Cell{
+	background-color:#00F;
+}
+
+.p4Cell{
+	background-color:#EBEB00;
+}
+
+.gamePiece{
+
+}
+
+.gamePieceContainer{
+	position:relative;
+	display:inline-block;
+	/*float:left;*/
+	padding:12px;
+}
+
+.rotateButton{
+	display:block;
+	position:absolute;
+	background-color:white;
+	left:2px;
+	top:3px;
+	width:24px;
+	height:24px;
+	/*border:2px solid black;*/
+	background: url(../rotate-icon.svg);
+	border-radius: 2px;
+}
+
+.rotateButton:active{
+	background-color:#AAA;
+}
+
+.flipButton{
+	display:block;
+	position:absolute;
+	background-color:blue;
+	width:16px;
+	height:16px;
+	border:2px solid black;
+	border-radius: 16px;	
+}
+
+.flipButton:active{
+	background-color:#00A;
+}
+
+.spacer{
+	height:35px;
+	width:35px;
+	float:left;
+}
+
+.hidden{
+	display:none;
+}
