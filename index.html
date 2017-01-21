@@ -9,6 +9,7 @@
 	<script type="text/javascript" src="pieces.js"></script>
 	<script type="text/javascript" src="entry.js"></script>
 	<script type="text/javascript" src="gameboard.js"></script>
+	<script type="text/javascript" src="GameManager.js"></script>
 	<script type="text/javascript" src="piece.js"></script>
 	<script>
 		//var GameArray = {};
@@ -28,9 +29,7 @@
 		}
 
 		function init(){
-			
-			GameArray = new GameBoard(20,20);
-			//GameArray = generateGameBoard(20, 20);
+			GameManager.initGame();
 			CurrentPlayerId = 4;
 			PlayerClassName = "p" + CurrentPlayerId + "Cell";
 			PlayerId = 4;

@@ -93,7 +93,7 @@ function GameBoard(x, y) {
 			}
 		    var coords = getCoordinates(offsetX, offsetY, $gamePiece);
 
-		    var validationResult = validateMove(GameArray, $gamePiece, coords.x, coords.y, PlayerStates[CurrentPlayerId]);
+		    var validationResult = validateMove(state, $gamePiece, coords.x, coords.y, PlayerStates[CurrentPlayerId]);
 		    if(validationResult == true)
 	    	{
 		    	//$gamePiece.draggable( 'disable' );
@@ -111,10 +111,9 @@ function GameBoard(x, y) {
 		}
 
 
-		function validateMove(gameArray, $piece, x, y, playerState){
+		function validateMove(gameState, $piece, x, y, playerState){
 			var isValid = true;
 			var pieceState = $piece.children("table").data("state");
-			var gameState = gameArray.state;
 			var pieceY = pieceState.length;
 			var pieceX = pieceState[0].length;
 
