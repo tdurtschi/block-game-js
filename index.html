@@ -11,13 +11,11 @@
 	<script type="text/javascript" src="gameboard.js"></script>
 	<script type="text/javascript" src="piece.js"></script>
 	<script>
-		var GameArray = {};
+		//var GameArray = {};
 		var PlayerPieceCollections = [];
 		var PlayerStates = [];
 		var PlayerClassName;
 		var CurrentPlayerId;
-		var gameX;
-		var gameY;
 		var SizeX = 25; //In PIXELS (matches CSS)
 		var SizeY = 25; //In PIXELS
 		$(init);
@@ -30,15 +28,12 @@
 		}
 
 		function init(){
+			
 			GameArray = new GameBoard(20,20);
 			//GameArray = generateGameBoard(20, 20);
 			CurrentPlayerId = 4;
 			PlayerClassName = "p" + CurrentPlayerId + "Cell";
 			PlayerId = 4;
-
-			gameX = $("#gameGrid").offset().left;
-			gameY = $("#gameGrid").offset().top;
-			
 			
 			for(var i = 1; i <= 4; i++)
 			{
@@ -50,12 +45,19 @@
 	</script>
 </head>
 <body>
+	<span id='header'>Blokus</span>
 	<div id="gameContainer">
 		<table id="gameGrid" cellspacing="0">
 		</table>
-		<span class="spacer"></span>
 		<div id="pieceCollection">
 		</div>
 	</div>
+	<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
+</div>
 </body>
 </html>

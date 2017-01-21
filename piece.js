@@ -98,7 +98,7 @@ var Piece = function(playerId, pid) {
 			.append($("<table cellspacing=\"0\"></table>"))
 			.append($rotateButton)
 			.append($flipButton);
-		fillPieceTable($piece.children('table'), pid);
+		render($piece.children('table'), pid);
 		return $piece;
 	};
 
@@ -113,7 +113,7 @@ var Piece = function(playerId, pid) {
 		});
 	}
 
-	function fillPieceTable($table, pid){
+	function render($table, pid){
 		var thisPiece = GamePieces[pid];
 		var stateArray = [];
 		var maxWidth = 0;
@@ -162,7 +162,7 @@ var Piece = function(playerId, pid) {
 				}
 			}
 		GamePieces[pid] = newPiece;
-		fillPieceTable($piece.children("table"), pid);
+		render($piece.children("table"), pid);
 	}
 
 	function rotatePiece(){
@@ -179,7 +179,7 @@ var Piece = function(playerId, pid) {
 				}
 			}
 		GamePieces[pid] = newPiece;
-		fillPieceTable($piece.children("table"), pid);
+		render($piece.children("table"), pid);
 	}
 
 	return {

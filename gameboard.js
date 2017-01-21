@@ -2,10 +2,17 @@ function GameBoard(x, y) {
 	var board = [];
 	var state = [];
 	var $board = $("#gameGrid");
+	var gameX;
+	var gameY;
 
 	init();
 
 	function init(){
+		//TODO:
+		//Break up into two calls:
+		//state = initGameState()
+		//board = initGameUI()
+
 		for(var i = 0; i < y; i++)
 		{
 			var gameRow = [];
@@ -25,6 +32,9 @@ function GameBoard(x, y) {
 		}
 
 		setupDroppable();
+
+		gameX = $("#gameGrid").offset().left;
+		gameY = $("#gameGrid").offset().top;
 	}
 	
 
@@ -37,8 +47,8 @@ function GameBoard(x, y) {
 				{
 					if(pieceData[i][j] == 1)
 					{
-						GameArray.html[y + i][x + j].addClass(PlayerClassName).removeClass("greyCell");
-						GameArray.state[y + i][x + j] = CurrentPlayerId;
+						board[y + i][x + j].addClass(PlayerClassName).removeClass("greyCell");
+						state[y + i][x + j] = CurrentPlayerId;
 					}
 				}
 			}
