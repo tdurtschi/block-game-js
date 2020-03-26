@@ -2,7 +2,7 @@
           "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<title>Blokus</title>
+	<title>Block Game</title>
     <link rel="stylesheet" type="text/css" href="styles/style.css"></link>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
@@ -11,14 +11,14 @@
 	<script type="text/javascript" src="GameManager.js"></script>
 	<script type="text/javascript" src="piece.js"></script>
 	<script>
-		//var GameArray = {};
 		var PlayerPieceCollections = [];
 		var PlayerStates = [];
 		var PlayerClassName;
 		var CurrentPlayerId;
 		var SizeX = 25; //In PIXELS (matches CSS)
 		var SizeY = 25; //In PIXELS
-		$(init);
+
+		// $(init);
 
 		function initPlayerState(playerId){
 			return {
@@ -40,10 +40,13 @@
 			}
 			PlayerPieceCollections[CurrentPlayerId].showPieces();
 		}
+
+
 	</script>
 </head>
 <body>
-	<span id='header'>Blokus</span>
+	<span id='header'>Block Game</span>
+	<a href="#" onClick="init()">Start New Game</a>
 	<div id="gameContainer">
 		<table id="gameGrid" cellspacing="0">
 		</table>
