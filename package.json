@@ -1,0 +1,17 @@
+{
+  "name": "block-game-js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/tdurtschi/block-game-js.git",
+  "author": "Teagan Durtschi",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server --open",
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}

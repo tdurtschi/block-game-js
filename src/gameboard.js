@@ -1,4 +1,4 @@
-function GameBoard(x, y) {
+export function GameBoard(x, y) {
 	var board = [];
 	var state = [];
 	var $board = $("#gameGrid");

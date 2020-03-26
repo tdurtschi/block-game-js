@@ -1,4 +1,4 @@
-var GamePieces = [
+export const GamePieces = [
 	[		//0
 	[0,1],
 	[0,1],
@@ -104,7 +104,7 @@ var GamePieces = [
 	[1]]
 ];
 
-var GamePiecesRotateSymmetry = [
+export const GamePiecesRotateSymmetry = [
 	false,
 	false,
 	false,
@@ -128,7 +128,7 @@ var GamePiecesRotateSymmetry = [
 	true
 ];
 
-var GamePiecesFlipSymmetry = [
+export const GamePiecesFlipSymmetry = [
 	false,
 	false,
 	false,

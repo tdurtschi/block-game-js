@@ -1,4 +1,4 @@
-var PieceCollection = function(playerId) {
+export const PieceCollection = function(playerId) {
 	this.playerId = playerId;
 	this.pieces = [];
 	for(var pid = 0; pid < GamePieces.length; pid++)
@@ -19,7 +19,7 @@ var PieceCollection = function(playerId) {
 	this.hidePieces();
 }
 
-var Piece = function(playerId, pid) {
+export const Piece = function(playerId, pid) {
 	var pieceDisplayClassName = "p" + playerId + "Cell";
 	var pieceId = pid;
 	var $piece;
